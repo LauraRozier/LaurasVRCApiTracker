@@ -37,14 +37,14 @@ jobs:
         uses: kemocade/Kemocade.Vrc.Api.Tracker.Action@da61f2cedae3a5bb1240752e2b739b5f006852a3
         with:
           output: ${{ env.output }}
-          username: ${{ vars.VRCHAT_USERNAME }}
+          username: ${{ secrets.VRCHAT_USERNAME }}
           password: ${{ secrets.VRCHAT_PASSWORD }}
           key: ${{ secrets.VRCHAT_KEY }}
-          worlds: ${{ vars.VRCHAT_WORLD_IDS }}
-          groups: ${{ vars.VRCHAT_GROUP_IDS }}
+          worlds: ${{ secrets.VRCHAT_WORLD_IDS }}
+          groups: ${{ secrets.VRCHAT_GROUP_IDS }}
           bot: ${{ secrets.DISCORD_BOT_TOKEN }}
-          discords: ${{ vars.DISCORD_GUILD_IDS }}
-          channels: ${{ vars.DISCORD_CHANNEL_IDS }}
+          discords: ${{ secrets.DISCORD_GUILD_IDS }}
+          channels: ${{ secrets.DISCORD_CHANNEL_IDS }}
           
       - name: Generate Directory Listings
         uses: jayanta525/github-pages-directory-listing@19ee734e017b656528749434335f75a1efb931bc
